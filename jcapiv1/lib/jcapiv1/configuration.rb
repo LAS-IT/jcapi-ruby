@@ -174,8 +174,7 @@ module JCAPIv1
     end
 
     def base_url
-      url = "#{scheme}://#{[host, base_path].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
-      URI.encode_www_form_component(url)
+      "#{scheme}://#{[host, base_path].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
     end
 
     # Gets API key (with prefix if set).
